@@ -1,0 +1,11 @@
+{
+  "type":"base",
+  "name":"wallgrass",
+  "frames":["textures/tiles/wallgrass.png"],
+  "speed":"0",
+  "destructable":"false",
+  "moveable":"false",
+  "wall":"true",
+  "blockslight":"false",
+  "lightstrength":"0",
+}

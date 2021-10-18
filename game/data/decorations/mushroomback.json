@@ -1,0 +1,7 @@
+{
+  "name":"mushroomback",
+  "wall":"true",
+  "blockslight":"false",
+  "frames":["textures/decorations/mushroomback.png"],
+  "speed":"0"
+}

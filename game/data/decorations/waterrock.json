@@ -1,0 +1,7 @@
+{
+  "name":"waterrock",
+  "wall":"false",
+  "blockslight":"true",
+  "frames":["textures/decorations/waterrock1.png","textures/decorations/waterrock2.png"],
+  "speed":"15"
+}

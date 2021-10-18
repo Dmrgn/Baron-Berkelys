@@ -1,0 +1,7 @@
+{
+  "name":"gumflower",
+  "wall":"false",
+  "blockslight":"false",
+  "frames":["textures/decorations/gumflower.png","textures/decorations/gumflower1.png","textures/decorations/gumflower.png","textures/decorations/gumflower2.png"],
+  "speed":"15"
+}

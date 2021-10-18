@@ -1,0 +1,8 @@
+{
+  "name":"coin",
+  "wall":"false",
+  "coin":"true",
+  "blockslight":"false",
+  "frames":["textures/decorations/coin1.png","textures/decorations/coin2.png","textures/decorations/coin3.png","textures/decorations/coin4.png","textures/decorations/coin5.png"],
+  "speed":"10"
+}

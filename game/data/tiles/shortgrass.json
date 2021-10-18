@@ -1,0 +1,11 @@
+{
+  "type":"base",
+  "name":"shortgrass",
+  "frames":["textures/tiles/shortgrass.png"],
+  "speed":"0",
+  "destructable":"false",
+  "moveable":"false",
+  "wall":"false",
+  "blockslight":"false",
+  "lightstrength":"0",
+}

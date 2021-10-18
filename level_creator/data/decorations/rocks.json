@@ -1,0 +1,7 @@
+{
+  "name":"rocks",
+  "wall":"false",
+  "blockslight":"false",
+  "frames":["textures/decorations/rocks.png"],
+  "speed":"0"
+}

@@ -1,0 +1,7 @@
+{
+  "name":"deadtree",
+  "wall":"true",
+  "blockslight":"false",
+  "frames":["textures/decorations/deadtree.png"],
+  "speed":"0"
+}

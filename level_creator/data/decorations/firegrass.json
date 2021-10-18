@@ -1,0 +1,7 @@
+{
+  "name":"firegrass",
+  "wall":"false",
+  "blockslight":"false",
+  "frames":["textures/decorations/firegrass.png"],
+  "speed":"0"
+}

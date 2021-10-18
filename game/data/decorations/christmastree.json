@@ -1,0 +1,7 @@
+{
+  "name":"christmastree",
+  "wall":"true",
+  "blockslight":"true",
+  "frames":["textures/decorations/christmastree.png"],
+  "speed":"0"
+}

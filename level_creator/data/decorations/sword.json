@@ -1,0 +1,7 @@
+{
+  "name":"sword",
+  "wall":"false",
+  "blockslight":"false",
+  "frames":["textures/decorations/sword1.png","textures/decorations/sword1.png","textures/decorations/sword2.png","textures/decorations/sword3.png","textures/decorations/sword4.png","textures/decorations/sword5.png","textures/decorations/sword6.png","textures/decorations/sword7.png"],
+  "speed":"10"
+}

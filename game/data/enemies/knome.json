@@ -1,0 +1,9 @@
+{
+  "name":"knome",
+  "right":["textures/enemies/knome.png"],
+  "left":["textures/enemies/knome.png"],
+  "idle":["textures/enemies/knome.png"],
+  "behave":"random",
+  "speed":0,
+  "movespeed":0.7,
+}

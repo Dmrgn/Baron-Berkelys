@@ -1,0 +1,7 @@
+{
+  "name":"mushroomhouse",
+  "wall":"true",
+  "blockslight":"false",
+  "frames":["textures/decorations/mushroom.png"],
+  "speed":"0"
+}

@@ -1,0 +1,7 @@
+{
+  "name":"warpedvines",
+  "wall":"false",
+  "blockslight":"false",
+  "frames":["textures/decorations/warpedvines.png"],
+  "speed":"0"
+}

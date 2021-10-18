@@ -1,0 +1,9 @@
+{
+  "name":"unicornstampede",
+  "right":["textures/enemies/unicornstampede.png"],
+  "left":["textures/enemies/unicornstampede.png"],
+  "idle":["textures/enemies/unicornstampede.png"],
+  "behave":"stampede",
+  "speed":0,
+  "movespeed":0.7,
+}

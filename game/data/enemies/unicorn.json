@@ -1,0 +1,9 @@
+{
+  "name":"unicorn",
+  "right":["textures/enemies/unicornright.png"],
+  "left":["textures/enemies/unicornleft.png"],
+  "idle":["textures/enemies/unicornright.png"],
+  "behave":"charge",
+  "speed":0,
+  "movespeed":0.6,
+}

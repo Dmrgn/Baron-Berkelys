@@ -1,0 +1,7 @@
+{
+  "name":"fence",
+  "wall":"true",
+  "blockslight":"false",
+  "frames":["textures/decorations/fence.png"],
+  "speed":"0"
+}

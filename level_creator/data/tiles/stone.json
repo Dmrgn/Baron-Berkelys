@@ -1,0 +1,12 @@
+{
+  "type":"base",
+  "name":"stone",
+  "frames":["textures/tiles/stone.png"],
+  "speed":"0",
+  "destructable":"false",
+  "moveable":"true",
+  "wall":"true",
+  "after_move_tile":"shortgrass",
+  "blockslight":"false",
+  "lightstrength":"0",
+}

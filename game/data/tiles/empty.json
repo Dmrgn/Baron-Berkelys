@@ -1,0 +1,11 @@
+{
+  "type":"any",
+  "name":"empty",
+  "frames":[],
+  "speed":"0",
+  "destructable":"false",
+  "moveable":"false",
+  "wall":"false",
+  "blockslight":"false",
+  "lightstrength":"0",
+}

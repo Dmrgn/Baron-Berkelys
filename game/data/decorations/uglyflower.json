@@ -1,0 +1,7 @@
+{
+  "name":"uglyflower",
+  "wall":"false",
+  "blockslight":"false",
+  "frames":["textures/decorations/uglyflower.png"],
+  "speed":"0"
+}

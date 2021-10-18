@@ -1,0 +1,7 @@
+{
+  "name":"vinerock",
+  "wall":"false",
+  "blockslight":"false",
+  "frames":["textures/decorations/vinerock.png"],
+  "speed":"0"
+}

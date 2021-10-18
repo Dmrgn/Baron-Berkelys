@@ -1,0 +1,11 @@
+{
+  "type":"base",
+  "name":"water",
+  "frames":["textures/tiles/water1.png","textures/tiles/water2.png","textures/tiles/water3.png","textures/tiles/water4.png","textures/tiles/water5.png","textures/tiles/water6.png"],
+  "speed":"5",
+  "destructable":"false",
+  "moveable":"false",
+  "wall":"true",
+  "blockslight":"false",
+  "lightstrength":"0",
+}

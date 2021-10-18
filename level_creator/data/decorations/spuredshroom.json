@@ -1,0 +1,7 @@
+{
+  "name":"spuredshroom",
+  "wall":"false",
+  "blockslight":"false",
+  "frames":["textures/decorations/spuredshroom.png"],
+  "speed":"0"
+}

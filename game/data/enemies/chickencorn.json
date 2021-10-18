@@ -1,0 +1,9 @@
+{
+  "name":"chickencorn",
+  "right":["textures/enemies/chickencornright.png"],
+  "left":["textures/enemies/chickencornleft.png"],
+  "idle":["textures/enemies/chickencornleft.png"],
+  "behave":"random",
+  "speed":0,
+  "movespeed":0.5,
+}

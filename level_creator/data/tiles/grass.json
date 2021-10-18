@@ -1,0 +1,11 @@
+{
+  "type":"base",
+  "name":"grass",
+  "frames":["textures/tiles/grass.png"],
+  "speed":"0",
+  "destructable":"false",
+  "moveable":"false",
+  "wall":"false",
+  "blockslight":"false",
+  "lightstrength":"0",
+}

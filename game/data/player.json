@@ -1,0 +1,13 @@
+{
+  "width":"64",
+  "height":"64",
+  "idle":["textures/characters/idle1.png","textures/characters/idle2.png","textures/characters/idle3.png","textures/characters/idle4.png","textures/characters/idle5.png"],
+  "right":["textures/characters/right1.png","textures/characters/right2.png","textures/characters/right3.png","textures/characters/right4.png"],
+  "left":["textures/characters/left1.png","textures/characters/left2.png","textures/characters/left3.png","textures/characters/left4.png"],
+  "righttrans":["textures/characters/lefttrans1.png","textures/characters/lefttrans2.png","textures/characters/lefttrans3.png"],
+  "lefttrans":["textures/characters/lefttrans1.png","textures/characters/lefttrans2.png","textures/characters/lefttrans3.png"],
+  "portal":["textures/characters/portal.png"],
+  "acceleration":"1",
+  "maxspeed":"5",
+  "speed":"10"
+}

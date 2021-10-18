@@ -1,0 +1,8 @@
+{
+  "name":"hauntedshroom",
+  "wall":"false",
+  "blockslight":"false",
+  "frames":["textures/decorations/hauntedshroom.png"],
+  "light":[50, 5, 70],
+  "speed":"0"
+}

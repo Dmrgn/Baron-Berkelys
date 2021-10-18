@@ -1,0 +1,7 @@
+{
+  "name":"unvinerock",
+  "wall":"false",
+  "blockslight":"false",
+  "frames":["textures/decorations/unvinerock.png"],
+  "speed":"0"
+}

@@ -1,0 +1,7 @@
+{
+  "name":"megamushroom",
+  "wall":"true",
+  "blockslight":"false",
+  "frames":["textures/decorations/megamushroom.png"],
+  "speed":"0"
+}

@@ -1,0 +1,11 @@
+{
+  "type":"base",
+  "name":"plains",
+  "frames":["textures/tiles/plains.png"],
+  "speed":"0",
+  "destructable":"false",
+  "moveable":"false",
+  "wall":"false",
+  "blockslight":"false",
+  "lightstrength":"0",
+}

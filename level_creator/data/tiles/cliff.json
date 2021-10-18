@@ -1,0 +1,11 @@
+{
+  "type":"wall",
+  "name":"cliff",
+  "frames":["textures/tiles/cliff.png"],
+  "speed":"0",
+  "destructable":"false",
+  "moveable":"false",
+  "wall":"true",
+  "blockslight":"false",
+  "lightstrength":"0",
+}

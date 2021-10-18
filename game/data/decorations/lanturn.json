@@ -1,0 +1,8 @@
+{
+  "name":"lanturn",
+  "wall":"false",
+  "blockslight":"false",
+  "frames":["textures/decorations/lanturn.png"],
+  "light":[75, 70, 70],
+  "speed":"0"
+}

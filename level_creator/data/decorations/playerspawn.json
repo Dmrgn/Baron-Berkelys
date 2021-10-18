@@ -1,0 +1,8 @@
+{
+  "name":"playerspawn",
+  "wall":"false",
+  "blockslight":"false",
+  "frames":["textures/decorations/spawn1.png","textures/decorations/spawn2.png","textures/decorations/spawn3.png"],
+  "light":[53, 85, 117],
+  "speed":"15"
+}
