@@ -88,7 +88,6 @@ void draw() {
     }
   }
   PVector mousepos = new PVector(abs(((mouseX-camera_position.x)/128)/camera_distance)%tiles.length, abs(((mouseY-camera_position.y)/128)/camera_distance)%tiles.length);
-  println(floor(mousepos.x) + " " + floor(mousepos.y));
   fill(255, 255, 255, 45);
   rect(int(mousepos.x)*128,int(mousepos.y)*128,128,128);
   _mouseX = mouseX;
