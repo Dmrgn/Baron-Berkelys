@@ -2,6 +2,10 @@
 <h1>Summary</h1>
 This was my final project for my grade 9 computer science class. It is a two dimensional top down rpg about a 'Death Eater' becoming a magical creature bounty hunter.
 
+![day time image](day.png)
+![night time image](night.png)
+![editor image](editor.png)
+
 <h2>Level Creator</h2>
 After coming up with the idea, the first thing I implemented was a simple level creator that loads JSON assets. You will see that the majority of the project is organized with JSON. This level creator can be used to load, edit and export levels. This significantly aided in level creation and if it weren't for my lack of time I would have invested more in this feature. 
 

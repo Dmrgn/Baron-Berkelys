@@ -45,7 +45,7 @@ float quality = 2;
 //for example camera_position controls where EVERYTHING is drawn or draw_canvas_layer() draws EVERYTHING
 
 //camera globals
-PVector camera_position = new PVector(0,0);
+PVector camera_position = new PVector(0, 0);
 float camera_distance = 2;
 
 //player global
@@ -57,14 +57,18 @@ PGraphics canvas;
 PGraphics litscreen;
 PGraphics postprocessing;
 PShader fragshader;
-PImage perlin;//perlin noise
-float sratio;//screen ratio width/height
+PImage perlin; //perlin noise
+float sratio; //screen ratio width/height
 float time = 200;
 JSONArray lights = new JSONArray();
 
 //layer and scene globals
 String layer = "base";
-String[] layers = {"base","decorations","areas"};
+String[] layers = {
+    "base",
+    "decorations",
+    "areas"
+};
 JSONObject dareas;
 JSONObject dtiles;
 JSONObject ddecorations;
@@ -81,99 +85,99 @@ JSONArray[] allmanifest = new JSONArray[4];
 String menutext = "";
 
 //sprite globals
-tile[][] tiles;//tiles array
-enemy[] enemies;//enemies
-portal pportal;//player portal
+tile[][] tiles; //tiles array
+enemy[] enemies; //enemies
+portal pportal; //player portal
 
 void setup() {
-  size(1920,1080,P2D);
-  noSmooth();
+    size(1920, 1080, P2D);
+    noSmooth();
 
-  sratio = ((float)width/(float)quality)/((float)height/(float)quality);//screen ratio with quality
-  fragshader = loadShader("fragshader.glsl");
-  canvas = createGraphics(width,height,P2D);
-  postprocessing = createGraphics(width,height,P2D);
-  //postprocessing.smooth(8);
-  litscreen = createGraphics(int(width/quality),int(height/quality),P2D);
-  //litscreen.smooth(8);
+    sratio = ((float) width / (float) quality) / ((float) height / (float) quality); //screen ratio with quality
+    fragshader = loadShader("fragshader.glsl");
+    canvas = createGraphics(width, height, P2D);
+    postprocessing = createGraphics(width, height, P2D);
+    //postprocessing.smooth(8);
+    litscreen = createGraphics(int(width / quality), int(height / quality), P2D);
+    //litscreen.smooth(8);
 
-  perlin = loadImage("textures/perlin.png");
+    perlin = loadImage("textures/perlin.png");
 
-  File dir = new File(dataPath("scenes"));
-  files = dir.listFiles();//load json levels list from scenes
+    File dir = new File(dataPath("scenes"));
+    files = dir.listFiles(); //load json levels list from scenes
 
-  drudge = new player(128*3,128*3);
-  enemies = new enemy[0];
-  pportal = new portal(0,0);
-  berkely = new baron(0,0);
+    drudge = new player(128 * 3, 128 * 3);
+    enemies = new enemy[0];
+    pportal = new portal(0, 0);
+    berkely = new baron(0, 0);
 
-  //load tile json
-  load_json();
+    //load tile json
+    load_json();
 
-  //load menu ui
-  load_menu_assets();
+    //load menu ui
+    load_menu_assets();
 
-  tiles = new tile[30][30];
-  for (int i = 0 ; i < tiles.length; i++) {
-    for (int j = 0 ; j < tiles[i].length; j++) {
-      if (floor(random(0,2)) == 1) {
-        tiles[i][j] = new tile(i, j, "grass");
-      } else {
-        tiles[i][j] = new tile(i, j, "plains");
-      }
+    tiles = new tile[30][30];
+    for (int i = 0; i < tiles.length; i++) {
+        for (int j = 0; j < tiles[i].length; j++) {
+            if (floor(random(0, 2)) == 1) {
+                tiles[i][j] = new tile(i, j, "grass");
+            } else {
+                tiles[i][j] = new tile(i, j, "plains");
+            }
+        }
     }
-  }
 }
 
 void draw() {
-  //show framerate in window bar
-  surface.setTitle("FPS: " + frameRate);
-  if (ingamemenu && !isdying) {//if in the menu while in a game
-    drawingamemenu();
-  } else if(story && !ingame && !isdying) {//if the story is being run
-    play_story();//(levelcontroller.pde)
-  }
-  if(ingame && !ingamemenu) {//if the game is actually running
-
-    //update player coords if not dying
-    if (!isdying) drudge.update();//(player.pde)
-
-    //draw
-    draw_canvas_layer();//everything (graphicscontroller.pde)
-    draw_litscreen_layer();//all things that interact with light (graphicscontroller.pde)
-    draw_postprocessing_layer();//fog/special effects (graphicscontroller.pde)
-
-    //update portal and enemies
-    if (!isdying) pportal.update();//(player.pde)
-    for (int i = 0 ; i < enemies.length; i++) {
-      if (!isdying) enemies[i].update();
+    //show framerate in window bar
+    surface.setTitle("FPS: " + frameRate);
+    if (ingamemenu && !isdying) { //if in the menu while in a game
+        drawingamemenu();
+    } else if (story && !ingame && !isdying) { //if the story is being run
+        play_story(); //(levelcontroller.pde)
     }
+    if (ingame && !ingamemenu) { //if the game is actually running
 
-    //handle lights and lighting
-    handle_lights();//(graphicscontroller.pde)
-    lights = new JSONArray();
-    //
-    pushMatrix();
-    scale(camera_distance,camera_distance);
-    background(0);
-    blendMode(NORMAL);
-    image(canvas, 0, 0, width, height);
-    blendMode(MULTIPLY);
-    image(litscreen, 0, 0,width,height);
-    blendMode(ADD);
-    image(postprocessing, 0, 0,width,height);
-    blendMode(NORMAL);
-    popMatrix();
+        //update player coords if not dying
+        if (!isdying) drudge.update(); //(player.pde)
 
-    //hard coded win conditions and mechanics
-    if (!isdying) do_hard_coded();//(levelcontroller.pde)
+        //draw
+        draw_canvas_layer(); //everything (graphicscontroller.pde)
+        draw_litscreen_layer(); //all things that interact with light (graphicscontroller.pde)
+        draw_postprocessing_layer(); //fog/special effects (graphicscontroller.pde)
 
-    //draw ui as top layer
-    if (!isdying) draw_ui();//(uicontroller.pde)
+        //update portal and enemies
+        if (!isdying) pportal.update(); //(player.pde)
+        for (int i = 0; i < enemies.length; i++) {
+            if (!isdying) enemies[i].update();
+        }
 
-    //if the player should be playing their death animation
-    if (isdying) displaydeath();
-  } else if (!story && !ingame){
-    draw_menu();//(uicontroller.pde)
-  }
+        //handle lights and lighting
+        handle_lights(); //(graphicscontroller.pde)
+        lights = new JSONArray();
+        //
+        pushMatrix();
+        scale(camera_distance, camera_distance);
+        background(0);
+        blendMode(NORMAL);
+            image(canvas, 0, 0, width, height);
+            blendMode(MULTIPLY);
+        image(litscreen, 0, 0, width, height);
+            blendMode(ADD);
+            image(postprocessing, 0, 0, width, height);
+        blendMode(NORMAL);
+        popMatrix();
+
+        //hard coded win conditions and mechanics
+        if (!isdying) do_hard_coded(); //(levelcontroller.pde)
+
+        //draw ui as top layer
+        if (!isdying) draw_ui(); //(uicontroller.pde)
+
+        //if the player should be playing their death animation
+        if (isdying) displaydeath();
+    } else if (!story && !ingame) {
+        draw_menu(); //(uicontroller.pde)
+    }
 }
