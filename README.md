@@ -11,7 +11,7 @@ This was my final project for my grade 9 computer science class. It is a two dim
 After coming up with the idea, the first thing I implemented was a simple level creator that loads JSON assets. You will see that the majority of the project is organized with JSON. This level creator can be used to load, edit and export levels. This significantly aided in level creation and if it weren't for my lack of time I would have invested more in this feature. 
 
 <h2>Implementation</h2>
-This project was created with Processing 3 and GLSL (Note: it is not compatible with Processing 4). The world is tile-based with entity sprites rendered per tile. The code was actually pretty organized until the final few days before submision when I turned some parts into prime spagetti code with extra cheese. I used GLSL to create a fragment shader that allows for real time raycasting to create lights and shadows. This was by far the most difficult piece to implement.
+This project was created with Processing 3 and GLSL (Note: It will now only run on Processing 4). The world is tile-based with entity sprites rendered per tile. The code was actually pretty organized until the final few days before submision when I turned some parts into prime spagetti code with extra cheese. I used GLSL to create a fragment shader that allows for real time raycasting to create lights and shadows. This was by far the most difficult piece to implement.
 
 <h2>Issues</h2>
 The Processing client does not seem to like GLSL shaders and so packaging the code as an executable results in a black screen.<br/><br/>
